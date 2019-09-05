@@ -5,6 +5,7 @@ int main() {
     const int NUM_ELEMENTS = 8;   // Number of elements
     int revVctr[8];               // User values
     int i;                        // Loop index
+    int temp;                      // variable to store numbers in
 
     cout << "Enter " << NUM_ELEMENTS << " integer values..." << endl;
     for (i = 0; i < NUM_ELEMENTS; ++i) {
@@ -12,8 +13,10 @@ int main() {
     }
 
     // Reverse
-    for (i = 0; i < NUM_ELEMENTS; ++i) {
-        revVctr[i] = revVctr[NUM_ELEMENTS - i]; // Swap
+    for (i = 0; i < 4; ++i) {
+        temp = revVctr[NUM_ELEMENTS - (i + 1)];
+        revVctr[NUM_ELEMENTS - (i + 1)] = revVctr[i] ; // Swap
+        revVctr[i] = temp;
     }
 
     // Print values
