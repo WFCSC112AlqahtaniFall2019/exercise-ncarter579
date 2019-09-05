@@ -1,9 +1,10 @@
 #include <iostream>
 using namespace std;
+#include <vector>
 
 int main() {
     const int NUM_ELEMENTS = 8;   // Number of elements
-    int revVctr[8];               // User values
+    vector<int> revVctr(8);               // User values
     int i;                        // Loop index
     int temp;                      // variable to store numbers in
 
@@ -14,9 +15,9 @@ int main() {
 
     // Reverse
     for (i = 0; i < 4; ++i) {
-        temp = revVctr[NUM_ELEMENTS - (i + 1)];
-        revVctr[NUM_ELEMENTS - (i + 1)] = revVctr[i] ; // Swap
-        revVctr[i] = temp;
+        temp = revVctr.at(NUM_ELEMENTS - (i + 1));
+        revVctr.at(NUM_ELEMENTS - (i + 1)) = revVctr.at(i) ; // Swap
+        revVctr.at(i) = temp;
     }
 
     // Print values
